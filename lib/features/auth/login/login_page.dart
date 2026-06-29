@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 ﻿import 'package:go_router/go_router.dart';
 import 'package:flutter/material.dart';
+=======
+﻿import 'package:flutter/material.dart';
+>>>>>>> cbea306aca70b10588f96e97e3bd6e433435fd8a
 import '../../../core/pocketbase/pb.dart';
 
 class LoginPage extends StatefulWidget {
@@ -16,8 +20,11 @@ class _LoginPageState extends State<LoginPage> {
 
   bool _obscurePassword = true;
   bool _isLoading = false;
+<<<<<<< HEAD
   
   get Navigator => null;
+=======
+>>>>>>> cbea306aca70b10588f96e97e3bd6e433435fd8a
 
   @override
   void dispose() {
@@ -103,6 +110,7 @@ class _LoginPageState extends State<LoginPage> {
     );
 
     if (role == 'admin') {
+<<<<<<< HEAD
       context.go('/admin');
     } else if (role == 'mitra') {
       context.go('/mitra');
@@ -110,6 +118,23 @@ class _LoginPageState extends State<LoginPage> {
       context.go('/main');
     }
 
+=======
+      Navigator.pushReplacementNamed(
+        context,
+        '/admin',
+      );
+    } else if (role == 'mitra') {
+      Navigator.pushReplacementNamed(
+        context,
+        '/mitra',
+      );
+    } else {
+      Navigator.pushReplacementNamed(
+        context,
+        '/main',
+      );
+    }
+>>>>>>> cbea306aca70b10588f96e97e3bd6e433435fd8a
   } catch (error) {
     final message = error is Exception
         ? error

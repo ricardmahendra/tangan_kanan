@@ -12,11 +12,19 @@ class AdminPage extends StatelessWidget {
         actions: [
           IconButton(
             icon: const Icon(Icons.logout),
+<<<<<<< HEAD
             onPressed: () async {
               await logout();
               // GoRouter otomatis redirect ke '/' via authNotifier
             },
           ),
+=======
+            onPressed: () {
+              pb.authStore.clear();
+              Navigator.pushReplacementNamed(context, '/');
+            },
+          )
+>>>>>>> cbea306aca70b10588f96e97e3bd6e433435fd8a
         ],
       ),
       body: const Center(
@@ -27,4 +35,8 @@ class AdminPage extends StatelessWidget {
       ),
     );
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> cbea306aca70b10588f96e97e3bd6e433435fd8a

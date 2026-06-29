@@ -54,8 +54,14 @@ class _ProfilePageState extends State<ProfilePage> {
     }
   }
 
+<<<<<<< HEAD
   Future<void> _logout() async {
   await logout();
+=======
+  void _logout() {
+    pb.authStore.clear();
+    Navigator.pushReplacementNamed(context, '/');
+>>>>>>> cbea306aca70b10588f96e97e3bd6e433435fd8a
   }
 
   void _navigateToRegistration() async {
